@@ -1,3 +1,7 @@
+
+# Use modern Bundler
+gem 'bundler', '~> 2.3'
+
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.0.12'
@@ -64,7 +68,7 @@ gem 'rack-attack', '~> 3.0.0'
 gem 'easy_table'
 gem 'phonelib', '~> 0.3.5'
 gem 'twilio-ruby', '~> 5.7.2'
-gem 'unread', github: 'InfraexDev/unread'
+gem 'unread', git: 'https://github.com/InfraexDev/unread.git'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
@@ -73,8 +77,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.4.3'
   gem 'mina'
-  gem 'mina-slack', github: 'InfraexDev/mina-slack'
-  gem 'meta_request'
+  gem 'mina-slack', git: 'https://github.com/InfraexDev/mina-slack.git'
+  gem 'meta_request', git: 'https://github.com/dejan/meta_request.git', branch: 'master'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
