@@ -2,11 +2,11 @@ services:
   - type: web
     name: peatio-crypto-exchange
     env: ruby
-    buildCommand: |
-      gem install bundler -v 1.17.3 &&
-      bundle install &&
-      bundle exec rake assets:precompile
+    runtime: ruby-2.7.8
+    buildCommand: bundle install && bundle exec rake assets:precompile
     startCommand: bundle exec rails server -p $PORT -e $RAILS_ENV
     envVars:
       - key: RAILS_ENV
+        value: production
+      - key: RAKE_ENV
         value: production
